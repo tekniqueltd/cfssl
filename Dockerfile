@@ -2,6 +2,9 @@ FROM golang:1.8.1
 
 ENV USER root
 
+WORKDIR /
+RUN go get github.com/steinbacher/goose/cmd/goose
+
 WORKDIR /go/src/github.com/cloudflare/cfssl
 COPY . .
 
