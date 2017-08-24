@@ -15,5 +15,5 @@ RUN go get github.com/GeertJohan/go.rice/rice && rice embed-go -i=./cli/serve &&
 
 EXPOSE 8888
 
-ENTRYPOINT ["cfssl"]
-CMD ["--help"]
+ENTRYPOINT ["/bin/bash","-c"]
+CMD ["cfssl --help"]
